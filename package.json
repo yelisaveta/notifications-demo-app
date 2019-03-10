@@ -3,15 +3,28 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^3.9.2",
+    "@material-ui/icons": "^3.0.2",
+    "@types/jest": "^24.0.9",
+    "@types/node": "^11.10.4",
+    "@types/react": "^16.8.6",
+    "@types/react-dom": "^16.8.2",
+    "axios": "^0.18.0",
+    "cypress-match-screenshot": "^1.1.0",
+    "express": "^4.16.4",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
-    "react-scripts": "2.1.5"
+    "react-jss": "^8.6.1",
+    "react-scripts": "2.1.5",
+    "typescript": "^3.3.3333"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start:client": "react-scripts start",
+    "start:server": "node server/index.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "cypress:open": "cypress open"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -21,5 +34,19 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "cypress": "^3.1.5",
+    "cypress-image-snapshot": "^3.0.0",
+    "cypress-testing-library": "^2.3.6",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.10.0",
+    "eslint-plugin-jest": "^22.3.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "jest-image-snapshot": "^2.8.1",
+    "prettier": "1.16.4",
+    "react-test-renderer": "^16.8.3",
+    "react-testing-library": "^5.8.0",
+    "snapshot-diff": "^0.5.0"
+  }
 }

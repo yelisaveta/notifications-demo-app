@@ -1,9 +1,14 @@
-import React, { Component } from "react";
+import * as React from "react";
 import axios from "axios";
 
-import Notifications from "./Notifications";
+import Notifications from "../Notifications";
 
-class App extends Component {
+interface Notification {
+  id: string;
+  liked: boolean;
+}
+
+class App extends React.Component {
   componentDidMount() {
     axios
       .get("http://localhost:3002/feed")
@@ -32,14 +37,16 @@ class App extends Component {
     error: null
   };
 
-  deleteNotification = id => {
+  deleteNotification = (id: string) => {
     this.setState({
-      feed: this.state.feed.filter(notification => notification.id !== id)
+      feed: this.state.feed.filter(
+        (notification: Notification) => notification.id !== id
+      )
     });
   };
 
-  likeNotification = id => {
-    const updatedFeed = this.state.feed.map(notification => {
+  likeNotification = (id: string) => {
+    const updatedFeed = this.state.feed.map((notification: Notification) => {
       if (notification.id === id) {
         notification.liked = true;
       }
