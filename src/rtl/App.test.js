@@ -30,7 +30,7 @@ it("indicates that feed loading is in progress", () => {
   expect(getByText("Loading feed..."));
 });
 
-it("showns error message if feed loading failed", async () => {
+it("shows error message if feed loading failed", async () => {
   getFeedMock.mockReturnValue(Promise.reject("Unable to fetch feed"));
 
   const { getByText } = render(<App />);
@@ -80,8 +80,6 @@ it("should allow to delete a notification from feed", async () => {
   const { getByText } = render(<App />);
   // Wait for the API request to finish
   await wait(() => expect(getByText("You have 3 notification(s)")));
-
-  expect(getByText("You have 3 notification(s)"));
 
   fireEvent.click(getByText("Delete"));
 

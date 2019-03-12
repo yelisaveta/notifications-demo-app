@@ -16,7 +16,7 @@ const onLikeMock = jest.fn();
  * Add unit tests to cover onClick behaviour.
  */
 describe("LikeButton", () => {
-  test("component renders correctly", () => {
+  test("renders a button", () => {
     const component = renderer.create(
       <JssProvider generateClassName={generateClassName}>
         <LikeButton onLike={onLikeMock} />

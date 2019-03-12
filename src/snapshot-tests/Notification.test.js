@@ -14,6 +14,7 @@ const props = {
 describe("Notification full snapshot test", () => {
   it("renders a Notification", () => {
     const tree = renderer.create(<Notification {...props} />).toJSON();
+
     expect(tree).toMatchSnapshot();
   });
 });

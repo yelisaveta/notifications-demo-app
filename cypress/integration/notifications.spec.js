@@ -1,9 +1,9 @@
-// extend cy commands with same commands as from react-testing-library: getByTest, queryByText, getByLabel etc.
+// extend cy commands with same commands as from react-testing-library: getByText, queryByText, getByLabel etc.
 import "cypress-testing-library/add-commands";
 import feed from "../fixtures/feed.json";
 
 describe("Notifications application", function() {
-  it("showns a message if a user has no new notifications", function() {
+  it("shows a message if a user has no new notifications", function() {
     cy.server();
     cy.route({
       method: "GET",

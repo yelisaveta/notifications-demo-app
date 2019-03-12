@@ -33,9 +33,9 @@ class App extends Component {
   };
 
   deleteNotification = id => {
-    this.setState({
-      feed: this.state.feed.filter(notification => notification.id !== id)
-    });
+    this.setState(state => ({
+      feed: state.feed.filter(notification => notification.id !== id)
+    }));
   };
 
   likeNotification = id => {

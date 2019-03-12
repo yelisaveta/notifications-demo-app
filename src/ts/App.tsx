@@ -8,7 +8,13 @@ interface Notification {
   liked: boolean;
 }
 
-class App extends React.Component {
+interface State {
+  feed: Array<Notification>;
+  error: null | Error;
+  isLoading: boolean;
+}
+
+class App extends React.Component<{}, State> {
   componentDidMount() {
     axios
       .get("http://localhost:3002/feed")
@@ -38,11 +44,11 @@ class App extends React.Component {
   };
 
   deleteNotification = (id: string) => {
-    this.setState({
-      feed: this.state.feed.filter(
+    this.setState(state => ({
+      feed: state.feed.filter(
         (notification: Notification) => notification.id !== id
       )
-    });
+    }));
   };
 
   likeNotification = (id: string) => {
