@@ -54,7 +54,7 @@ exports[`PlainNotification without MUI component renders correctly 1`] = `
       />
     </button>
     <button
-      className="MuiButtonBase-root-101 MuiButton-root-75 MuiButton-contained-86 MuiButton-containedPrimary-87 MuiButton-raised-89 MuiButton-raisedPrimary-90 MuiButton-sizeSmall-98 MuiCardActions-action-74"
+      className="MuiButtonBase-root-101 MuiButton-root-75 MuiButton-contained-86 MuiButton-containedPrimary-87 MuiButton-raised-89 MuiButton-raisedPrimary-90 MuiCardActions-action-74"
       disabled={false}
       onBlur={[Function]}
       onClick={[Function]}

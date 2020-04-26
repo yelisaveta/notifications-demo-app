@@ -54,7 +54,7 @@ exports[`Notification full snapshot test renders a Notification 1`] = `
       />
     </button>
     <button
-      className="MuiButtonBase-root-103 MuiButton-root-77 MuiButton-contained-88 MuiButton-containedPrimary-89 MuiButton-raised-91 MuiButton-raisedPrimary-92 MuiButton-sizeSmall-100 MuiCardActions-action-76"
+      className="MuiButtonBase-root-103 MuiButton-root-77 MuiButton-contained-88 MuiButton-containedPrimary-89 MuiButton-raised-91 MuiButton-raisedPrimary-92 MuiCardActions-action-76"
       disabled={false}
       onBlur={[Function]}
       onClick={[Function]}
