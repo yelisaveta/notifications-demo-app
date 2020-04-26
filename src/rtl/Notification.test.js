@@ -1,5 +1,5 @@
 import React from "react";
-import { render, fireEvent, cleanup } from "react-testing-library";
+import { render, fireEvent, cleanup } from "@testing-library/react";
 
 import Notification from "../Notification";
 
@@ -19,25 +19,25 @@ afterEach(cleanup);
 
 /**
  * Main points:
- *  1. Tests are __not coupled to implementation details__. They don't break on refactor but do when functionality is broken.
- *  2. Tests are __focused on what users see and do__ rather than on how you components are implemented.
- *  3. Tests are __easy to write__.
- *  4. Tests are __easy to use in TDD style__.
- *  5. Quite often tests __lean towards integration tests__ and make lower level tests less important or even not needed.
+ *  1. Tests are not coupled to implementation details. They don't break on refactor but do when functionality is broken.
+ *  2. Tests are focused on what users see and do, rather than on how you components are implemented.
+ *  3. Tests are easy to write.
+ *  4. Tests are easy to use in TDD style.
+ *  5. Quite often tests lean towards integration tests and make lower level tests less important or even not required.
  */
 describe("Notification", () => {
   // 1: test that rendered content is correct
   it("renders a title and a message", () => {
     const { getByText } = renderWithProps(props);
 
-    // query your elements how your user - by text
+    // query your elements how your user would - by text
     expect(getByText("my test title"));
     expect(getByText("my test message"));
   });
   it("renders two buttons: Delete and Like", () => {
     const { getByText } = renderWithProps(props);
 
-    // query your elements how your user - by text
+    // query your elements how your user would - by text
     expect(getByText("Delete"));
     expect(getByText("Like"));
   });
@@ -46,7 +46,7 @@ describe("Notification", () => {
   it("should call property with notification id when Delete button is clicked", () => {
     const { getByText } = renderWithProps(props);
 
-    // query your elements how your user - by text - and click on it
+    // query your elements how your user would - by text - and click on it
     fireEvent.click(getByText("Delete"));
 
     expect(props.onDelete).toHaveBeenCalledTimes(1);

@@ -43,7 +43,7 @@ export class Notification extends Component {
           <Button
             variant="contained"
             color="primary"
-            size="small"
+            size="medium"
             onClick={this.handleDelete(id)}
           >
             Delete

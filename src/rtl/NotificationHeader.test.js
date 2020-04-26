@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "react-testing-library";
+import { render } from "@testing-library/react";
 import NotificationHeader from "../NotificationHeader";
 
 describe("NotificationsHeader", () => {
@@ -16,7 +16,7 @@ describe("NotificationsHeader", () => {
     );
 
     // ensure that title is shown only once
-    expect(queryAllByText("test title").length).toBe(1);
+    expect(queryAllByText(/test title/).length).toBe(1);
 
     // ensure that title has been updated correctly
     expect(getByText("[Liked] test title"));
